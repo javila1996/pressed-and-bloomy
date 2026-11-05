@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Leads · Pressed and Bloomy</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Figtree:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="topbar"><span class="brand">Pressed and Bloomy</span><span class="who" id="who"></span>
+<a class="admin-only btn quiet" href="#" hidden>Manage users and fields</a>
+<button class="btn quiet" id="signout">Sign out</button></header>
+<main><div class="head"><h1>Leads</h1><button class="btn" id="new-lead">Add lead</button></div>
+<div class="board" id="board"></div></main>
+<dialog id="lead-dialog"><form id="lead-form" method="dialog"><h2>Add lead</h2>
+<label>Name<input name="name" required></label>
+<label>Email<input name="email" type="email"></label>
+<label>Phone<input name="phone" type="tel"></label>
+<label>Job type<select name="job_type"><option>Wedding bouquet</option><option>Memorial keepsake</option><option>Frame or art piece</option><option>Other</option></select></label>
+<label>Due date<input name="due_date" type="date"></label>
+<p class="msg" id="form-msg" role="alert"></p>
+<div class="actions"><button class="btn quiet" value="cancel" formnovalidate>Cancel</button><button class="btn" value="save">Save lead</button></div></form></dialog>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script><script src="config.js"></script><script src="app.js"></script><script>initDashboard()</script></body></html>
